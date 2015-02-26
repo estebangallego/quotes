@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Awesome quotes!</title>
+	<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h2>Here are awesome quotes!</h2>
+			<%for (var quote in quotes) { %>
+			<div class="quote">
+				<p>"<%= quotes[quote].name %>"</p>
+				<p><%= quotes[quote].quote %></p>
+				<a href="/quotes/<%= quotes[quote]._id %>" class="button button-primary">Delete quote</a>	
+				<hr />	
+			</div>
+			<% } %>
+			<a href="/" class="button button-primary">Add more quotes!</a>
+		</div>
+	</div>
+</body>
+</html>
